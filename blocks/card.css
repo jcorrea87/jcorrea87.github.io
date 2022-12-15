@@ -1,23 +1,9 @@
-@font-face {
-  font-family: "Inter-Black";
-  src: url(../fonts/Inter-Black.woff2);
-}
-
-.card-wrapper {
-  padding-bottom: 67px;
-  background-color: #000000;
-  display: grid;
-  grid-template-columns: 282px 282px 282px;
-  grid-row-gap: 20px;
-  grid-column-gap: 17px;
-  grid-template-areas:
-    "yosemite lake bald"
-    "latemar vanoise lago";
-}
-
 .card {
-  margin-top: 0px;
-  margin-left: 0px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 282px);
+  grid-template-rows: repeat(auto-fill, 361px);
+  row-gap: 20px;
+  column-gap: 17px;
 }
 
 .card__picture {
@@ -29,13 +15,14 @@
 
 .card__caption {
   width: 282px;
-  height: 79px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   background-color: #ffffff;
-  padding: 0;
   box-sizing: border-box;
   border-radius: 0 0 10px 10px;
   margin: 0;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -43,13 +30,14 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  font-family: "Inter-Black", "Arial", sans-serif;
+  font-family: "Inter", "Arial", sans-serif;
   font-weight: 900;
   font-size: 24px;
   line-height: 1.2;
   text-align: center;
   align-items: center;
-  padding: 6px 0 0 20px;
+  padding-left: 20px;
+  margin: 0;
 }
 
 .card__button {
@@ -57,70 +45,26 @@
   width: 21px;
   height: 18px;
   margin-right: 20px;
-  margin-top: 32px;
   align-content: center;
-  background-color: #ffffff;
+  justify-content: flex-start;
+  background-color: transparent;
   border: none;
   background-image: url(../images/black-heart.svg);
 }
 .card__button:hover {
-  background-image: url(../images/grey-heart.svg);
-  background-repeat: no-repeat;
-}
-.card-yosemite {
-  grid-area: yosemite;
+  opacity: 0.6;
+  cursor: pointer;
 }
 
-.card-lake {
-  grid-area: lake;
-}
-
-.card-bald {
-  grid-area: bald;
-}
-
-.card-latemar {
-  grid-area: latemar;
-}
-
-.card-vanoise {
-  grid-area: vanoise;
-}
-
-.card-lago {
-  grid-area: lago;
-}
-
-@media screen and (max-width: 1000px) {
-  .card-wrapper {
-    grid-template-areas:
-      "yosemite lake"
-      "bald latemar"
-      "vanoise lago";
-    position: relative;
-    left: 160px;
-  }
-}
-@media screen and (max-width: 800px) {
-  .card-wrapper {
-    left: 190px;
-  }
-}
-@media screen and (max-width: 750px) {
-  .card-wrapper {
-    grid-template-areas:
-      "yosemite"
-      "lake"
-      "bald"
-      "latemar"
-      "vanoise"
-      "lago";
+@media screen and (max-width: 880px) {
+  .card {
+    justify-content: center;
   }
 }
 
 @media screen and (max-width: 320px) {
-  .card-wrapper {
-    position: relative;
-    left: 85px;
+  .card {
+    padding-top: 36px;
+    justify-content: center;
   }
 }
