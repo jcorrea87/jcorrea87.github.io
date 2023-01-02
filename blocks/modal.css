@@ -8,13 +8,13 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.modal_opened {
-  display: block;
+.modal_closed {
+  display: none;
 }
 
 .modal__container {
   width: 430px;
-  height: 345px;
+  height: 350px;
   background-color: #ffffff;
   border-radius: 10px;
   position: fixed;
@@ -27,27 +27,9 @@
   font-style: normal;
   font-weight: 900;
   font-size: 24px;
-  line-height: 29px;
+  line-height: 1.21;
   color: #000000;
   margin: 34px 64px 54px 36px;
-}
-
-.modal__save-button {
-  width: 358px;
-  height: 50.15px;
-  background-color: #000000;
-  border: none;
-  background-image: url(../images/save-icon.svg);
-  background-size: 109px 18px;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin: 48px 36px 36.51px 36px;
-  padding: 0;
-}
-
-.modal__save-button:hover {
-  opacity: 0.8;
-  cursor: pointer;
 }
 
 .modal__close-button {
@@ -72,23 +54,18 @@
   .modal__container {
     width: 282px;
     height: 340px;
-    top: 30%;
+    top: 45%;
   }
 
   .modal__heading {
     margin: 25px 22px 75px 22px;
-  }
-
-  .modal__save-button {
-    width: 238px;
-    height: 46px;
-    margin: 45px 22px 25px 22px;
+    font-size: 18px;
   }
 
   .modal__close-button {
     width: 26px;
     height: 26px;
-    top: -50px;
+    top: -40px;
     left: 253px;
   }
 }

@@ -7,11 +7,6 @@
     <title>Around the World</title>
     <link rel="stylesheet" href="./pages/index.css" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
-    <style>
-      ::placeholder {
-        color: black;
-      }
-    </style>
   </head>
   <body class="body">
     <div class="page">
@@ -23,8 +18,8 @@
           <img class="profile__picture" src="./images/jacques-cousteau-min.jpg" alt="Picture of Jacques Cousteau" />
           <div class="profile__info">
             <h1 class="profile__name">Jacques Cousteau</h1>
-            <button class="profile__edit-button" type="button"></button>
-            <div class="modal modal_opened">
+            <button id="btn-edit" class="profile__edit-button" type="button"></button>
+            <div class="modal modal_closed">
               <div class="modal__container">
                 <h1 class="modal__heading">Edit profile</h1>
                 <form class="form">
@@ -32,23 +27,27 @@
                     <input class="form__input-name" type="text" placeholder="Name" />
                     <input class="form__input-description" type="text" placeholder="Description" />
                   </fieldset>
+                  <button class="form__save-button" type="submit"></button>
                 </form>
-                <button class="modal__save-button" type="button"></button>
-                <button class="modal__close-button" type="button"></button>
+                <button id="btn-close" class="modal__close-button" type="button"></button>
               </div>
             </div>
             <p class="profile__description">Explorer</p>
           </div>
           <button class="profile__add-button" type="button"></button>
         </section>
-        <section class="card">
-          <div class="card__divider">
-            <img class="card__picture" src="./images/yosemite-valley-min.jpg" alt="river running through a forest with a mountain in the background" />
-            <div class="card__caption">
-              <h2 class="card__heading">Yosemite Valley</h2>
-              <button class="card__button" type="button"></button>
+        <ul class="cards">
+          <template id="card__template">
+            <div class="card">
+              <img class="card__picture" src="#" alt="" />
+              <div class="card__caption">
+                <h2 class="card__heading"></h2>
+                <button class="card__button" type="button"></button>
+              </div>
             </div>
-          </div>
+          </template>
+        </ul>
+        <!--
           <div class="card__divider">
             <img class="card__picture" src="./images/lake-louise-min.jpg" alt="lake with mountains in the background" />
             <div class="card__caption">
@@ -84,7 +83,7 @@
               <button class="card__button" type="button"></button>
             </div>
           </div>
-        </section>
+        -->
       </main>
       <footer class="footer">
         <p class="footer__copyright">&copy;2022 Around The U.S.</p>
