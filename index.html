@@ -19,7 +19,7 @@
           <div class="profile__info">
             <h1 class="profile__name">Jacques Cousteau</h1>
             <button id="btn-edit" class="profile__edit-button" type="button"></button>
-            <div class="modal modal_closed">
+            <div class="modal">
               <div class="modal__container">
                 <h1 class="modal__heading">Edit profile</h1>
                 <form class="form">
@@ -34,56 +34,42 @@
             </div>
             <p class="profile__description">Explorer</p>
           </div>
-          <button class="profile__add-button" type="button"></button>
+          <button id="add-button" class="profile__add-button" type="button"></button>
         </section>
         <ul class="cards">
           <template id="card__template">
             <div class="card">
-              <img class="card__picture" src="#" alt="" />
+              <button class="card__delete-button" type="button"></button>
+              <button id="image-button" class="card__image-button" type="button">
+                <img class="card__picture" src="#" alt="" />
+              </button>
               <div class="card__caption">
                 <h2 class="card__heading"></h2>
-                <button class="card__button" type="button"></button>
+                <button class="card__like-button" type="button"></button>
               </div>
             </div>
           </template>
         </ul>
-        <!--
-          <div class="card__divider">
-            <img class="card__picture" src="./images/lake-louise-min.jpg" alt="lake with mountains in the background" />
-            <div class="card__caption">
-              <h2 class="card__heading">Lake Louise</h2>
-              <button class="card__button" type="button"></button>
-            </div>
+        <div class="cards-modal cards-modal__closed">
+          <div class="cards-modal__container">
+            <h1 class="cards-modal__heading">New Place</h1>
+            <form class="cards-form">
+              <fieldset class="cards-form__fieldset">
+                <input class="cards-form__input-title" type="text" placeholder="Title" />
+                <input class="cards-form__input-link" type="text" placeholder="Image link" />
+              </fieldset>
+              <button class="cards-form__save-button" type="submit"></button>
+            </form>
+            <button id="cards-btn-close" class="cards-modal__close-button" type="button"></button>
           </div>
-          <div class="card__divider">
-            <img class="card__picture" src="./images/bald-mountains-min.jpg" alt="mountains with sunrise in the background" />
-            <div class="card__caption">
-              <h2 class="card__heading">Bald Mountains</h2>
-              <button class="card__button" type="button"></button>
-            </div>
+        </div>
+        <div class="image-modal image-modal__closed">
+          <div class="image-modal__container">
+            <img class="image-modal__image" src="#" alt="" />
+            <p class="image-modal__caption"></p>
+            <button id="image-btn-close" class="image-modal__close-button" type="button"></button>
           </div>
-          <div class="card__divider">
-            <img class="card__picture" src="./images/latemar-min.jpg" alt="mountain at night with stars" />
-            <div class="card__caption">
-              <h2 class="card__heading">Latemar</h2>
-              <button class="card__button" type="button"></button>
-            </div>
-          </div>
-          <div class="card__divider">
-            <img class="card__picture" src="./images/vanoise-national-park-min.jpg" alt="lake in front of mountains" />
-            <div class="card__caption">
-              <h2 class="card__heading">Vanoise National Park</h2>
-              <button class="card__button" type="button"></button>
-            </div>
-          </div>
-          <div class="card__divider">
-            <img class="card__picture" src="./images/lago-di-braies-min.jpg" alt="boats on a lake in front of mountains" />
-            <div class="card__caption">
-              <h2 class="card__heading">Lago di Braies</h2>
-              <button class="card__button" type="button"></button>
-            </div>
-          </div>
-        -->
+        </div>
       </main>
       <footer class="footer">
         <p class="footer__copyright">&copy;2022 Around The U.S.</p>
