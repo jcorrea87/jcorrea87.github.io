@@ -18,18 +18,18 @@
           <img class="profile__picture" src="./images/jacques-cousteau-min.jpg" alt="Picture of Jacques Cousteau" />
           <div class="profile__info">
             <h1 class="profile__name">Jacques Cousteau</h1>
-            <button id="btn-edit" class="profile__edit-button" type="button"></button>
+            <button id="button-edit" class="profile__edit-button" type="button"></button>
             <div class="modal">
               <div class="modal__container">
                 <h1 class="modal__heading">Edit profile</h1>
                 <form class="form">
                   <fieldset class="form__fieldset">
-                    <input class="form__input-name" type="text" placeholder="Name" />
-                    <input class="form__input-description" type="text" placeholder="Description" />
+                    <input class="form__input-name" type="text" placeholder="Name" required />
+                    <input class="form__input-description" type="text" placeholder="Description" required />
                   </fieldset>
-                  <button class="form__save-button" type="submit"></button>
+                  <button class="form__save-button" type="submit">Save</button>
                 </form>
-                <button id="btn-close" class="modal__close-button" type="button"></button>
+                <button id="button-close" class="modal__close-button" type="button"></button>
               </div>
             </div>
             <p class="profile__description">Explorer</p>
@@ -53,21 +53,21 @@
         <div class="cards-modal">
           <div class="cards-modal__container">
             <h1 class="cards-modal__heading">New Place</h1>
-            <form class="cards-form">
+            <form id="cards-form" class="cards-form">
               <fieldset class="cards-form__fieldset">
-                <input class="cards-form__input-title" type="text" placeholder="Title" />
-                <input class="cards-form__input-link" type="text" placeholder="Image link" />
+                <input class="cards-form__input-title" type="text" placeholder="Title" required />
+                <input class="cards-form__input-link" type="text" placeholder="Image link" required />
               </fieldset>
-              <button class="cards-form__save-button" type="submit"></button>
+              <button class="cards-form__save-button" type="submit">Create</button>
             </form>
-            <button id="cards-btn-close" class="cards-modal__close-button" type="button"></button>
+            <button id="cards-button-close" class="cards-modal__close-button" type="button"></button>
           </div>
         </div>
         <div class="image-modal">
           <div class="image-modal__container">
             <img class="image-modal__image" src="#" alt="" />
             <p class="image-modal__caption"></p>
-            <button id="image-btn-close" class="image-modal__close-button" type="button"></button>
+            <button id="image-button-close" class="image-modal__close-button" type="button"></button>
           </div>
         </div>
       </main>
